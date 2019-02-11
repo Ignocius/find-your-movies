@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <movies-dash-board :api-key="apiKey"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MoviesDashBoard from './components/MoviesDashBoard.vue'
+const API_KEY = process.env.VUE_API_KEY
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    MoviesDashBoard
+  },
+  data() {
+    return {
+      apiKey: API_KEY
+    }
+  },
 }
 </script>
 
