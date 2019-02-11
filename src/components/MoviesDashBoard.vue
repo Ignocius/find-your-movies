@@ -30,12 +30,8 @@ export default {
       };
       const getData = async () => {
         const url = new URL(this.url)
-        url.searchParams.query = 'Jack Reacher'
-        url.searchParams.api_key = this.apiKey
-        console.log(url)
-        
         const response = await suchFetch({}, {api_key: this.apiKey, query: 'Jack Reacher'})
-        console.log(response)
+        console.loig(response)
       }
       getData()
     },
